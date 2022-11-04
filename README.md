@@ -17,25 +17,25 @@ This example application has 3 different endpoints
 
 * `GET /health`: A simple ping endpoint to check that the server is running.
 
-* `POST /route`: Implements calls to `osrm.route` to calculate the way from A to B.
+* `POST /api/route`: Implements calls to `osrm.route` to calculate the way from A to B.
 
   _Example body_:
   ```
     { coordinates: [[13.3905, 52.5205], [13.3906, 52.5206]] }
   ```
 
-* `POST /match`: Implements calls to `osrm.match` to calculate the most plausible way.
+* `POST /api/match`: Implements calls to `osrm.match` to calculate the most plausible way.
 
   _Example body_:
   ```
     { coordinates: [[139.892358, 37.500563], [139.892359, 37.500564], [139.89236, 37.500566],] }
   ```
 
-## Use API
-Execute curl command
-```
-$ curl -X POST -H "Content-Type: application/json" -d 'sample.json' localhost:5050/api/match
-```
+* Execute curl command.
+  _Example command_:
+  ```
+  $ curl -X POST -H "Content-Type: application/json" -d 'sample.json' localhost:5050/api/match
+  ```
 
 ## Build the docker image
 Build the docker image.
