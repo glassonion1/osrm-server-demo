@@ -1,0 +1,11 @@
+services:
+  osrm:
+    build:
+      context: .
+      args:
+        REGION_VERSION: "tohoku-221024"
+    volumes:
+      - ./app/src:/app/src
+    ports:
+      - "5050:5050"
+    command: "yarn start"

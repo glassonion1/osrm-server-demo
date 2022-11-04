@@ -1,0 +1,22 @@
+{
+  "name": "osrm-server",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "license": "MIT",
+  "scripts": {
+    "format": "prettier --write --ignore-path .gitignore 'src/**/*.js'",
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2",
+    "express-validator": "^6.14.2",
+    "morgan": "^1.10.0",
+    "helmet": "^6.0.0",
+    "@mapbox/node-pre-gyp": "^1.0.10",
+    "@project-osrm/osrm": "^5.27.1"
+  },
+  "devDependencies": {
+    "prettier": "^2.7.1"
+  }
+}
