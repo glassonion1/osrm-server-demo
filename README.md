@@ -37,7 +37,8 @@ This example application has 3 different endpoints
 
 _Example command_:
 ```
-$ curl -X POST -H "Content-Type: application/json" -d '@match.json' localhost:5050/api/match
+$ curl -X POST -H "Content-Type: application/json" -d '@json/route.json' localhost:5050/api/route
+$ curl -X POST -H "Content-Type: application/json" -d '@json/match.json' localhost:5050/api/match
 ```
 
 ## Build the docker image
