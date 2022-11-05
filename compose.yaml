@@ -3,7 +3,7 @@ services:
     build:
       context: .
       args:
-        REGION_VERSION: "tohoku-221024"
+        REGION_VERSION: "tohoku-221104"
     volumes:
       - ./app/src:/app/src
     ports:

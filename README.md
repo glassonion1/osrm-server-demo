@@ -5,8 +5,10 @@ production-ready instance.
 It is based on [Open Source Routing Machine (OSRM)](https://project-osrm.org)
 and [Express](http://expressjs.com/).
 
-## Run osrm server
-Use docker compose.
+![route image](img/route.png "sample")
+
+## Starting the server
+Launch the application with the specified dataset.
 ```
 $ docker compose up
 ```
@@ -21,7 +23,7 @@ This example application has 3 different endpoints
 
   _Example body_:
   ```
-    { coordinates: [[13.3905, 52.5205], [13.3906, 52.5206]] }
+    { coordinates: [[140.1781984, 37.9174683], [140.054293, 37.881392]] }
   ```
 
 * `POST /api/match`: Implements calls to `osrm.match` to calculate the most plausible way.
@@ -31,15 +33,15 @@ This example application has 3 different endpoints
     { coordinates: [[139.892358, 37.500563], [139.892359, 37.500564], [139.89236, 37.500566],] }
   ```
 
-* Execute curl command.
+### Curl command example
 
-  _Example command_:
-  ```
-  $ curl -X POST -H "Content-Type: application/json" -d 'sample.json' localhost:5050/api/match
-  ```
+_Example command_:
+```
+$ curl -X POST -H "Content-Type: application/json" -d '@match.json' localhost:5050/api/match
+```
 
 ## Build the docker image
 Build the docker image.
 ```
-$ docker build ./ --build-arg REGION_VERSION=tohoku-221024 -t asia-northeast1-docker.pkg.dev/osrm-server-demo/osrm-server
+$ DOCKER_BUILDKIT=1 docker build ./ --build-arg REGION_VERSION=tohoku-221024 -t osrm-server-demo
 ```

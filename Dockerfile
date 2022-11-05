@@ -5,12 +5,14 @@ ARG REGION_VERSION
 WORKDIR /osrm
 RUN mkdir ./data
 
+# Get osm data for your region of interest
 RUN <<EOF
     apt-get update
     apt-get -y install curl
     curl http://download.geofabrik.de/asia/japan/{$REGION_VERSION.osm.pbf} --output "data/#1"
 EOF
 
+# create a routable graph
 RUN <<EOF
     osrm-extract -p /opt/car.lua data/$REGION_VERSION.osm.pbf
     # Multi-Level Dijkstra: Build is fast but API response is slowly than CH
