@@ -41,6 +41,12 @@ $ curl -X POST -H "Content-Type: application/json" -d '@json/route.json' localho
 $ curl -X POST -H "Content-Type: application/json" -d '@json/match.json' localhost:5050/api/match
 ```
 
+### Python example
+```
+$ cd client
+$ python sample.py
+```
+
 ## Build the docker image
 Build the docker image.
 ```
