@@ -44,5 +44,5 @@ $ curl -X POST -H "Content-Type: application/json" -d '@json/match.json' localho
 ## Build the docker image
 Build the docker image.
 ```
-$ DOCKER_BUILDKIT=1 docker build ./ --build-arg REGION_VERSION=tohoku-221024 -t osrm-server-demo
+$ DOCKER_BUILDKIT=1 docker build ./ --build-arg REGION_VERSION=tohoku-221104 -t osrm-server-demo
 ```
