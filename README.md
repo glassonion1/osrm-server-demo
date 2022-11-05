@@ -34,8 +34,6 @@ This example application has 3 different endpoints
   ```
 
 ### Curl command example
-
-_Example command_:
 ```
 $ curl -X POST -H "Content-Type: application/json" -d '@json/route.json' localhost:5050/api/route
 $ curl -X POST -H "Content-Type: application/json" -d '@json/match.json' localhost:5050/api/match
