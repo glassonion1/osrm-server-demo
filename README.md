@@ -7,6 +7,9 @@ and [Express](http://expressjs.com/).
 
 ![route image](img/route.png "sample")
 
+## Motivation
+There is a nice OSRM server demo repository [here](https://github.com/door2door-io/osrm-express-server-demo), but unfortunately it is not maintained anymore and the code is outdated and doesn't work properly. This repository is intended to provide a new OSRM server demo to replace [osrm-express-server-demo](https://github.com/door2door-io/osrm-express-server-demo).
+
 ## Starting the server
 Launch the application with the specified dataset.
 ```

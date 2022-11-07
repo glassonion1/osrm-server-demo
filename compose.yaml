@@ -2,6 +2,8 @@ services:
   osrm:
     build:
       context: .
+      # Change this value if you use other regions. ex) kansai-latest, kanto-latest..
+      # For more information: http://download.geofabrik.de/
       args:
         REGION_VERSION: "tohoku-221104"
     volumes:
