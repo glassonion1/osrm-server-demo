@@ -51,5 +51,7 @@ $ python sample.py
 ## Build the docker image
 Build the docker image.
 ```
-$ DOCKER_BUILDKIT=1 docker build ./ --build-arg REGION_VERSION=tohoku-221104 -t osrm-server-demo
+$ DOCKER_BUILDKIT=1 docker build ./ --build-arg REGION_VERSION=tohoku-latest -t osrm-server-demo
 ```
+Change REGION_VERSION value if you use other regions(kansai-latest kanto-latest... etc).
+For more information: http://download.geofabrik.de/
